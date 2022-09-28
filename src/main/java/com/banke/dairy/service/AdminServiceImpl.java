@@ -17,7 +17,7 @@ public class AdminServiceImpl implements AdminService {
 	
 	@Override
 	public String registerAdmin(AdminDTO admin) throws BankeException {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
