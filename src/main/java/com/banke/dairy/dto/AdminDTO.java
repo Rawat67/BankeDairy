@@ -1,5 +1,7 @@
 package com.banke.dairy.dto;
 
+import com.banke.dairy.entity.Admin;
+
 public class AdminDTO {
 	private Integer adminId;
 	private String name;
@@ -36,6 +38,16 @@ public class AdminDTO {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}	
+	}
+	
+	public static Admin createAdminEntity(AdminDTO adminDTO) {
+		Admin admin = new Admin();
+		admin.setAdminId(adminDTO.getAdminId());
+		admin.setName(adminDTO.getName());
+		admin.setEmailId(adminDTO.getEmailId());
+		admin.setPassword(adminDTO.getPassword());
+		admin.setPhone(adminDTO.getPhone());
+		return admin;
+	}
 	
 }

@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.banke.dairy.dto.AdminDTO;
+
 @Entity
 @Table(name="admin")
 public class Admin {
@@ -50,6 +52,16 @@ public class Admin {
 	public String toString() {
 		return "Admin [adminId=" + adminId + ", name=" + name + ", emailId=" + emailId + ", phone=" + phone
 				+ ", password=" + password + "]";
+	}
+	
+	public static AdminDTO createAdminDTO(Admin admin) {
+		AdminDTO adminDTO = new AdminDTO();
+		adminDTO.setAdminId(admin.getAdminId());
+		adminDTO.setEmailId(admin.getEmailId());
+		adminDTO.setName(admin.getName());
+		adminDTO.setPassword(admin.getPassword());
+		adminDTO.setPhone(admin.getPhone());
+		return adminDTO;
 	}
 	
 }
